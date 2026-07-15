@@ -75,19 +75,40 @@ let fs = require("fs");
 //   console.log("Folder Created");
 // });
 
-let data = `Employee ID : 101
-Name : Rahul
-Department : Developer
+// let data = `Employee ID : 101
+// Name : Rahul
+// Department : Developer
 
-Employee ID : 102
-Name : Priya
-Department : HR`
+// Employee ID : 102
+// Name : Priya
+// Department : HR`
 
-fs.writeFile("./Company/employees.txt",data,(err)=>{
-    if(err){
-        console.log("something went wrong")
-        return;
-    }
-    console.log("File baan gayi");
-    
-})
+// fs.writeFile("./Company/employees.txt",data,(err)=>{
+//     if(err){
+//         console.log("something went wrong")
+//         return;
+//     }
+//     console.log("File baan gayi");
+
+// })
+
+//4
+// fs.readFile("./Company/employees.txt", "utf-8", (err, data) => {
+//   if (err) {
+//     console.log("something went wrong");
+//     return;
+//   }
+//   console.log(data);
+// });
+
+//5
+let data = `\nEmployee ID : 103
+Name : Aman
+Department : Tester`;
+fs.appendFile("./Company/employees.txt", data, (err) => {
+  if (err) {
+    console.log("something went wrong");
+    return;
+  }
+  console.log("File Updated");
+});
