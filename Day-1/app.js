@@ -102,13 +102,65 @@ let fs = require("fs");
 // });
 
 //5
-let data = `\nEmployee ID : 103
-Name : Aman
-Department : Tester`;
-fs.appendFile("./Company/employees.txt", data, (err) => {
+// let data = `\nEmployee ID : 103
+// Name : Aman
+// Department : Tester`;
+// fs.appendFile("./Company/employees.txt", data, (err) => {
+//   if (err) {
+//     console.log("something went wrong");
+//     return;
+//   }
+//   console.log("File Updated");
+// });
+
+//6
+// fs.readFile("./Company/employees.txt", "utf-8", (err, data) => {
+//   if (err) {
+//     console.log("something went wrong");
+//     return;
+//   }
+//   console.log(data);
+// });
+
+//7
+
+// fs.rename("./Company/employees.txt", "./Company/employeeDetails.txt", (err) => {
+//   if (err) {
+//     console.log("something went wrong");
+//     return;
+//   }
+//   console.log("File Name Changed");
+// });
+
+//8
+
+// console.log(fs.existsSync("./Company/employeeDetails.txt"))
+
+//9
+// fs.readdir("./Company",(err,data)=>{
+//     if(err){
+//         console.log("something went wrong")
+//         return;
+//     }
+//     console.log(data);
+
+// })
+
+//10
+// fs.unlink("./Company/employeeDetails.txt", (err) => {
+//   if (err) {
+//     console.log("Something went wrong");
+//     return;
+//   }
+//   console.log("File deleted");
+
+// });
+
+//11
+fs.rmdir("./Company", (err) => {
   if (err) {
-    console.log("something went wrong");
+    console.log("Something went wrong");
     return;
   }
-  console.log("File Updated");
+  console.log("Folder deleted");
 });
