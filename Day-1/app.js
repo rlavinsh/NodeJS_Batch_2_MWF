@@ -1,5 +1,5 @@
-const { log } = require("console");
-let fs = require("fs");
+// const { log } = require("console");
+// let fs = require("fs");
 // console.log(fs);
 // Mujhe ek file banani hein
 //writeFileSync: jab bhi mujhe file create karni hein
@@ -57,12 +57,37 @@ let fs = require("fs");
 //   console.log("file created");
 // });
 // console.log("code ends");
+// fs.readFile("student.txt", "utf-8", (err, data) => {
+//   if (err) {
+//     console.log("something went wrong");
+//     console.log(err.message);
+//     return;
+//   }
+//   console.log(data);
+// });
 
-fs.readFile("student.txt", "utf-8", (err, data) => {
-  if (err) {
-    console.log("something went wrong");
-    console.log(err.message);
-    return;
-  }
-  console.log(data);
-});
+let fs = require("fs");
+// fs.mkdir("Company", (err) => {
+//   if (err) {
+//     console.log("something went wrong");
+//     return;
+//   }
+//   console.log("Folder Created");
+// });
+
+let data = `Employee ID : 101
+Name : Rahul
+Department : Developer
+
+Employee ID : 102
+Name : Priya
+Department : HR`
+
+fs.writeFile("./Company/employees.txt",data,(err)=>{
+    if(err){
+        console.log("something went wrong")
+        return;
+    }
+    console.log("File baan gayi");
+    
+})
