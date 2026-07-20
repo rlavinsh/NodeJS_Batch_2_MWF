@@ -1,7 +1,0 @@
-Employee ID : 101
-Name : Rahul
-Department : Developer
-
-Employee ID : 102
-Name : Priya
-Department : HR
