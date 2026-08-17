@@ -193,7 +193,6 @@ Students must follow the following rules.
 
 Use only Express.js.
 Do NOT use Database.
-Do NOT use Express Router.
 Store data only inside the provided array.
 Use Route Parameters wherever required.
 Use Query Parameters wherever required.
